@@ -1,0 +1,9 @@
+main.container{
+    background-color: rgb(234,200,220);
+}
+@media (min-width: 768px){
+    .image-title-prg {
+        height:200px;
+        display:table-cell;
+    }
+}
