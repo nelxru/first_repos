@@ -1,0 +1,20 @@
+#oSRv6znj-n8 {padding:5rem;}
+
+.jumbotron{
+background-color: black;
+
+
+}
+.display-3, p{
+    color: white;
+}
+.display-3{
+    font-family: 'Baloo Tamma', cursive;
+}
+
+
+#carouselButtons {
+    align-content: center;
+    position: absolute;
+    bottom: 0px;
+}
