@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="styles.css>">
+    <script src="main.js"></script>
+</head>
+<body>
+    <button id="append">Append</button>
+    <button id="appendTo">AppendTo</button>
+    <button id="prepend">Prepend</button>
+    <button id="prependTo">PrependTo</button>
+    <hr>
+    <button id="before"> Add Before</button>
+    <button id="after">Add After</button>
+<hr>
+<button id="remove">Remove</button>
+<button id="removeAll">Remove All</button>
+
+    <div class="container">
+    <h1>Hello World</h1></div>
+
+</body>
+</html>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+ 
+<script>
+$(document).ready(function(){
+    $("#append").on("click", function(){
+        $(".container").append('<p style="color:red">Appending!</p>');
+    });
+
+     $("#appendTo").on("click", function(){
+         $('<p style="color:blue;">Appending To!</p>').appendTo(".container");
+     });
+
+ $("#prepend").on("click", function(){
+    $(".container").prepend('<p style="color:green">Prepending!</p>');
+    });
+
+      $("#prependTo").on("click", function(){
+        $('<p style="color:purple;">Prepending To!</p>').prependTo(".container");
+     });
+
+     $("#before").on("click", function(){
+         $('.container').before('<p style="color:orange;">Adding Before</p>');
+     });
+     $("#after").on("click", function(){
+         $('.container').after('<p style="color:orange;">Adding After</p>');
+     });
+     
+    $("#remove").on("click", function(){
+        $("p", ".container").remove();
+
+    })
+    $("#removeAll").on("click", function(){
+        $("p").remove();
+    })
+
+
+});
+
+</script>
