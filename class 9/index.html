@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <h1>Select you dream car!</h1>
+   
+      <form action="/auto-select.php">
+        <fieldset>
+            <label for="make">Car make:</label>
+            <select id="make" name="make">
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="merc" selected="selected">Mercedes</option>
+                <option>Lexus</option>
+            </select>
+        </fieldset>
+      
+        <fieldset>
+            <label for="model">Car Model:</label>
+            <select id="model" name="model" disabled></select>
+        </fieldset>
+
+        <fieldset>
+            <input type="submit" value="Hit it!">
+        </fieldset>
+   </form>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>  
+    <script>
+    $(document).ready( function(){
+        var audiModels = ["S2", "S3", "S4", "S5", "7-Series"];
+        var bmwModels = ["2-Series", "3-Series", "4-Series", "5-Series", "7-Series"];
+        var mercModels = ["Class-A", "Class-B", "Class-C", "Class-E", "Class-E"];
+        var lexusModels = ["IS", "ES", "LX"];
+       
+       
+        var updateModel = function(){
+            console.log($('#make').val());
+            
+            $('#model').removeAttr('disabled');
+            $('#model').html('');
+
+            if($("#make").val() === 'audi'){
+                for(var i = 0; i < audiModels.length; i++){
+                    console.log(audiModels[i]);
+                    var htmlContent = '<option Value="' + audiModels[i] + '">' + audiModels[i] + "</option>";
+                    //<option value="2-Series">2-Series</option>
+                    $('#model').append(htmlContent);
+                }
+            }
+
+              if($("#make").val() === 'bmw'){
+                for(var i = 0; i < bmwModels.length; i++){
+                    console.log(bmwModels[i]);
+                    var htmlContent = '<option Value="' + bmwModels[i] + '">' + bmwModels[i] + "</option>";
+                    //<option value="2-Series">2-Series</option>
+                    $('#model').append(htmlContent);
+                }
+            }
+
+
+                  if($("#make").val() === 'merc'){
+                for(var i = 0; i < mercModels.length; i++){
+                    console.log(mercModels[i]);
+                    var htmlContent = '<option Value="' + mercModels[i] + '">' + mercModels[i] + "</option>";
+                    //<option value="2-Series">2-Series</option>
+                    $('#model').append(htmlContent);
+                }
+            }
+
+              if($("#make").val() === 'lexus'){
+                for(var i = 0; i < lexusModels.length; i++){
+                    console.log(lexusModels[i]);
+                    var htmlContent = '<option Value="' + lexusModels[i] + '">' + lexusModels[i] + "</option>";
+                    //<option value="2-Series">2-Series</option>
+                    $('#model').append(htmlContent);
+                }
+            }
+        }
+  
+  
+        $('#make').change(function(){
+            updateModel();
+
+        });
+
+});
+
+</script>
+
+</body>
+</html>

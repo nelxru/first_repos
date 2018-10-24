@@ -76,11 +76,15 @@
 
   /*about page*/
   .About-title{
-   color: peachpuff;
-    text-align: center;
+   color:gray;
+    text-align: left;
     margin-top:3rem;
   }
-
+.About-paragraph{
+  color:rgb(36, 30, 31);
+  padding-right:3rem;
+  
+}
   
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { ... }
