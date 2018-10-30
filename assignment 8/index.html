@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>United States Census</h1>
+
+  <form action="auto-select.php">
+    <div class="form-check">
+        <label for="form-check-input">What is Your Race?</label>  
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          White
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+       Black
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+       Mixed
+        </label>
+      </div>
+    <fieldset>
+      <label for="question">Are you Hispanic or Latino?</label>  
+      <select id="question" name="make">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </fieldset>
+    </div>
+</div>
+
+    <fieldset>
+      <label for="ethnicity">If yes, select all that apply:</label>
+      <select id="ethnicity" name="ethnicity">
+        <option value="Mexican">Mexican</option>
+        <option value="Dominican">Dominican</option>
+        <option value="Peruvian">Peruvian</option>
+        <option value="Puerto Rican">Puerto Rican</option>
+        <option value="Cuban">Cuban</option>
+        <option value="Salvadorian">Salvadorian</option>
+      </select>
+    </fieldset>
+</div>
+
+    <fieldset>
+      <input type="submit" value="Hit it!">
+    </fieldset>
+</div>
+  </form>
+
+  <script>
+    $(document).ready( function(){
+      var audiModels = ["S2", "S3", "S5", "S7"];
+      var bmwModels = ["2-Series", "3-Series", "4-Series", "5-Series", "7-Series"];
+      var mercModels = ["Class-A", "Class-B", "Class-C", "Class-E", "Class-S", "Class-G"];
+      var lexusModels = ["IS", "ES", "LX"];
+      
+      var updateModel = function(){
+        console.log($('#yes').val());
+        $('#ethnicity').removeAttr('disabled');
+        $('#ethnicity').html('');
+        
+        if($('#yes').val() === 'yes'){
+          for(var i = 0; i < audiModels.length; i++){
+            console.log(audiModels[i]);
+            var htmlContent = '<option value="' + audiModels[i] + '">' + audiModels[i] + "</option>";
+            $('#model').append(htmlContent);
+          }
+        }
+        if($('#make').val() === 'bmw'){
+          for(var i = 0; i < bmwModels.length; i++){
+            console.log(bmwModels[i]);
+            var htmlContent = '<option value="' + bmwModels[i] + '">' + bmwModels[i] + "</option>";
+            $('#model').append(htmlContent);
+          }
+        }
+        if($('#make').val() === 'merc'){
+          for(var i = 0; i < mercModels.length; i++){
+            console.log(mercModels[i]);
+            var htmlContent = '<option value="' + mercModels[i] + '">' + mercModels[i] + "</option>";
+            $('#model').append(htmlContent);
+          }
+        }
+        if($('#make').val() === 'lexus'){
+          for(var i = 0; i < lexusModels.length; i++){
+            console.log(lexusModels[i]);
+            var htmlContent = '<option value="' + lexusModels[i] + '">' + lexusModels[i] + "</option>";
+            $('#model').append(htmlContent);
+          }
+        }
+      }
+      $('#make').change(function(){
+        updateModel();
+      });
+    } );
+  </script>
+  
+</body>
+</html>
+
