@@ -6,61 +6,71 @@
 
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-<link rel="stylesheet" type="text/css" href=styles.css>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href=styles.css>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <h1>United States Census</h1>
 
-  <form action="auto-select.php">
-    <div class="form-check">
-        <label for="form-check-input">What is Your Race?</label>  
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        <label class="form-check-label" for="exampleRadios1">
-          White
-        </label>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>United States Census</h1>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-       Black
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-        <label class="form-check-label" for="exampleRadios2">
-       Mixed
-        </label>
-      </div>
-    <fieldset>
-      <label for="question">Are you Hispanic or Latino?</label>  
-      <select id="question" name="make">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-    </fieldset>
     </div>
-</div>
 
-    <fieldset>
-      <label for="ethnicity">If yes, select all that apply:</label>
-      <select id="ethnicity" name="ethnicity">
-        <option value="Mexican">Mexican</option>
-        <option value="Dominican">Dominican</option>
-        <option value="Peruvian">Peruvian</option>
-        <option value="Puerto Rican">Puerto Rican</option>
-        <option value="Cuban">Cuban</option>
-        <option value="Salvadorian">Salvadorian</option>
-      </select>
-    </fieldset>
-</div>
+    <form class="row" action="" method="POST">
+      <div class="col">
+        <fieldset>
+          <label for="form-check-input">What is Your Race?</label> 
+          
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="race" id="racePicker1" value="white" checked>
+            <label class="form-check-label" for="racePicker">White</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="race" id="racePicker2" value="black">
+            <label class="form-check-label" for="racePicker">Black</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="race" id="racePicker3" value="mixed">
+            <label class="form-check-label" for="racePicker">Mixed</label>
+          </div>
+        </fieldset>    
+      </div>
 
-    <fieldset>
-      <input type="submit" value="Submit">
-    </fieldset>
-</div>
-  </form>
+      <div class="col">
+        <fieldset>
+          <label for="question">Are you Hispanic or Latino?</label>  
+          <select id="question" name="hispanic_latino">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </fieldset>
+      </div>
+
+      <div class="col">
+        <fieldset>
+          <label for="ethnicity">If yes, select all that apply:</label>
+          <select id="ethnicity" name="ethnicity" multiple>
+            <option value="mexican">Mexican</option>
+            <option value="dominican">Dominican</option>
+            <option value="peruvian">Peruvian</option>
+            <option value="puerto_rican">Puerto Rican</option>
+            <option value="cuban">Cuban</option>
+            <option value="salvadorian">Salvadorian</option>
+          </select>
+        </fieldset>
+      </div>
+
+      <div class="col-12">
+        <input type="submit" value="Submit" class="float-right">
+      </div>
+    </form>
+  </div>
 
   <script>
     $(document).ready( function(){
