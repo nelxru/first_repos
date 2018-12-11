@@ -1,0 +1,39 @@
+/*nav*/
+.bg-light {
+  background-color: #080606!important;
+  color:white;
+  margin-bottom:5rem;
+}
+.navbar-light .navbar-nav .nav-link {
+color:white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color:#A5D9D0 ;
+}
+
+
+.navbar-light .navbar-nav .nav-link:active {
+  color:grey ;
+}
+.navbar-light .navbar-nav .nav-link:visited {
+  color:white ;
+}
+
+
+
+.cart-icon{
+  width: 40px;
+}
+
+
+
+
+
+
+/*footer*/
+.bg-dark {
+  background-color:black!important;
+
+  margin-top: 5rem;
+}

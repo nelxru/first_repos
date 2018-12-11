@@ -1,0 +1,262 @@
+
+
+/*nav*/
+.bg-light {
+    background-color: #080606!important;
+    color:white;
+    margin-bottom:5rem;
+}
+.navbar-light .navbar-nav .nav-link {
+  color:white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:#A5D9D0 ;
+}
+
+
+.navbar-light .navbar-nav .nav-link:active {
+    color:grey ;
+}
+.navbar-light .navbar-nav .nav-link:visited {
+    color:white ;
+}
+
+
+
+.cart-icon{
+    width: 40px;
+}
+
+
+
+ul{
+    list-style-type: none;
+}
+
+a, .plp-listing, .card, .btn-read, .btn-blog-post, .btn-block, .plp-listing:hover, .card:hover, .btn-blog-post:hover, .card-img-top, .card-img-top:hover{
+    cursor: pointer !important;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.plp-listing, .card, .btn-read, .btn-blog-post, .btn-block{
+    transition: all .2s;
+}
+
+.plp-listing:hover, .card:hover, .btn-blog-post:hover {
+    transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.plp-listing:active, .btn-read:active, .btn-blog-post:active, .btn-block:active {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.active, .active:hover, .active:active, .active:visited, .active:focus, .text-red{
+    color: #F7B4CA !important;
+}
+
+.alert{
+    border-radius: 0px;
+}
+
+.alert-danger, .btn-primary, .btn-primary:visited, .btn-primary:focus{
+    background:#F7B4CA;
+    transition: all .2s;
+}
+
+.btn-primary:hover, .btn-primary:active{
+    background: magenta !important;
+    transform: scale(1.05);
+    transition: all .2s;
+}
+
+.btn-primary:active{
+    transform: scale(.90);
+    transition: all .5s;
+}
+
+.btn-primary:visited, .btn-primary:active, .btn-primary:hover, .btn-primary:focus, .btn-primary{
+    box-shadow: none;
+}
+
+.btn-primary{
+    border: none;
+}
+
+.slide-in{
+    animation: slideIn .75s ease;
+}
+
+@keyframes slideIn{
+    from{
+        transform: translateY(-50px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+.dropdown-item:focus{
+    background: #F7B4CA !important;
+}
+
+.call-button{
+    width: 100%;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgrey !important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgrey;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgrey;
+}
+
+.bg-brown{
+    background-color: #261605;
+}
+
+.my-card{
+   
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.25);
+}
+
+.pdp-deets{
+    border-top: 2px solid lightgrey;
+}
+
+.pdp-lg-deets{
+    border-left: 2px solid lightgrey;
+    height: 200px;
+}
+
+.carousel-control-next-icon{
+    background-image: url(../assets/img/arrow-right.png);
+    height: 30px;
+}
+
+.carousel-control-prev-icon{
+    background-image: url(../assets/img/arrow-left.png);
+    height: 30px;
+}
+/* 
+.carousel-control-next:focus, .carousel-control-prev:focus{
+    opacity: 0.5;
+} */
+
+.bulleted{
+    list-style-type: circle;
+    padding-left: 20px !important;
+}
+
+
+  #logo {
+    background: #ccc;
+    width: 150px;
+    height: 70px;
+  }
+  
+  .navbar-toggler {
+    margin-top: 15px;
+    list-style: none;
+  }
+  
+ 
+
+
+.dropdown-menu{
+    margin: 1rem 0rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    
+    color:black;
+    background-color: #F7B4CA;
+}
+
+.dropdown-item:hover{
+    background-color: #F7B4CA;
+    color: #F7B4CA !important;
+}
+
+.form-control{
+    background-color: #F7B4CA;
+    border: none;
+    color:black;
+}
+
+.form-control:hover, .form-control:focus, .form-control:active{
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
+  background-color: #F7B4CA;
+  color:black;
+}
+
+.btn-submit{
+    background-color:#F7B4CA;
+    color:black;
+}
+
+hr{
+    width: 100%;
+}
+
+
+
+.card-body{
+    background-color:lightgrey;
+}
+
+.img-fade-in{
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.card:hover .img-fade-in{
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.img-fade-out{
+    transition: all 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card:hover .img-fade-out{
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.carousel-indicators li{
+    background-color: black;
+}
+
+.carousel-indicators .active{
+    background-color: #F7B4CA;
+}
+
+.splash-background-color{
+    background-color: #f8f8f8;
+}
+
+
+/*footer*/
+.bg-dark {
+    background-color:black!important;
+
+    margin-top: 5rem;
+}
