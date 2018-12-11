@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+     <canvas id="Box" width="600" height="480">
+        Get a new browser to see this!
+    </canvas>
+    <body onload="draw();">
+        <canvas id="canvas" width="150" height="150"></canvas>
+
+        <script>
+        
+        function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    // Cubic curves example
+    ctx.beginPath();
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
+    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(255, 0, 0, 0.5)';
+ctx.fillStyle = 'rgba(255, 0, 0, 0.5)';
+  }
+}
+        
+var ctx = document.getElementById('canvas').getContext('2d');
+var offset = 0;
+
+function draw() {
+  ctx.clearRect(0, 0, 50, 50);
+  ctx.setLineDash([4, 2]);
+  ctx.lineDashOffset = -offset;
+  ctx.strokeRect(10, 10, 100, 100);
+}
+
+function march() {
+  offset++;
+  if (offset > 16) {
+    offset = 0;
+  }
+  draw();
+  setTimeout(march, 20);
+}
+
+march();   
+var lineargradient = ctx.createLinearGradient(0, 0, 150, 150);
+lineargradient.addColorStop(0, 'white');
+lineargradient.addColorStop(1, 'black');
+     </script>
+ 
+
+       
+    
+  
+</body>
+</html> 
